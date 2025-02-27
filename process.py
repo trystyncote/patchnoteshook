@@ -50,7 +50,7 @@ def determine_date():
 
 def primary():
     with open("data.json") as file_pointer:
-        obj = json.load(file_pointer)
+        obj = json.load(file_pointer)["body"]
 
     with open("messages.txt", "x") as file_pointer:
         header = determine_date()

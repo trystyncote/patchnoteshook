@@ -12,7 +12,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Collect body of Issue
-        run: echo toJSON(github.event.issue.body) > data.json
+        run: |
+          echo '{
+            "body": ${{ toJSON(github.event.issue.body) }}
+          }' > data.json
+      
 
       - name: Set up Python  # The data is processed by a Python program, so a
         # set-up is required.
