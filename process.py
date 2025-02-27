@@ -9,6 +9,7 @@ def wrap_text(text):
 
 
 def filter_through_list(obj):
+    print(obj)
     with io.StringIO() as string:
         type_ = obj["type"]
         string.write(f"-# {type_["effect"]} \\* {type_["group"]} (pg. {type_["page"]})\\n")
