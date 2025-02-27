@@ -20,7 +20,7 @@ def filter_through_list(obj):
             string.write(f"- {point}\\n")
 
         if "comment" in obj:
-            string.write(f"\"{obj["comment"]}\"")
+            string.write(f"\\\"{obj["comment"]}\\\"")
 
         return string.getvalue()
 
