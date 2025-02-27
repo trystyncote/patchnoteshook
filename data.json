@@ -1,0 +1,27 @@
+[
+    {
+        "type": {
+            "effect": "BALANCING",
+            "group": "Species \\[Legendary Feature\\]",
+            "page": 5
+        },
+		"name": "Class Feature: Ranger",
+		"points": [
+            "Removed feature 1",
+            "Added feature 2",
+            "Reworded feature 3"
+        ], 
+        "comment": "This feature sucks anyways."
+	},
+    {
+        "type": {
+            "effect": "REWORDING",
+            "group": "Moves",
+            "page": 12
+        },
+		"name": "Urshifu",
+		"points": [
+            "Added to Doc"
+        ]
+	}
+]
