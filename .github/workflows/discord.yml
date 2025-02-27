@@ -20,6 +20,10 @@ jobs:
       - name: Process Data
         run: python process.py
 
+      # TEMPORARY; DEBUGGING
+      - name: Debug messages.txt
+        run: cat messages.txt
+
       - name: Send messages to Discord
         run: |
           while read -r msg; do
