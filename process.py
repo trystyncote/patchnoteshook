@@ -11,13 +11,13 @@ def wrap_text(text):
 def filter_through_list(obj):
     with io.StringIO() as string:
         type_ = obj["type"]
-        string.write(f"-# {type_["effect"]} \\* {type_["group"]} (pg. {type_["page"]})\\n")
+        string.write(f"-# {type_["effect"]} \\* {type_["group"]} (pg. {type_["page"]})\\\\n")
         # The first line looks like '-# $EFFECT \* $GROUP (pg. $PAGE)'
 
-        string.write(f"**{obj["name"]}**\\n")
+        string.write(f"**{obj["name"]}**\\\\n")
 
         for point in obj["points"]:
-            string.write(f"- {point}\\n")
+            string.write(f"- {point}\\\\n")
 
         if "comment" in obj:
             string.write(f"\\\"{obj["comment"]}\\\"")
