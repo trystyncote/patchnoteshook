@@ -2,7 +2,7 @@ name: Send the Patch Notes to Discord.
 
 on:
   issues:
-    types: [opened, closed]
+    types: [closed]
 
 jobs:
   process_json:
