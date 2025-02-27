@@ -2,26 +2,26 @@
     {
         "type": {
             "effect": "BALANCING",
-            "group": "Species \\[Legendary Feature\\]",
-            "page": 5
+            "group": "Species",
+            "page": 3
         },
-		"name": "Class Feature: Ranger",
+		"name": "Human",
 		"points": [
-            "Removed feature 1",
-            "Added feature 2",
-            "Reworded feature 3"
-        ], 
-        "comment": "This feature sucks anyways."
+	            "Removed feature 1",
+	            "Added feature 2",
+	            "Reworded feature 3"
+	        ], 
+        "comment": "Needed to rework."
 	},
     {
         "type": {
-            "effect": "REWORDING",
-            "group": "Moves",
+            "effect": "BALANCING",
+            "group": "Spell",
             "page": 12
         },
-		"name": "Urshifu",
+		"name": "Hold Person",
 		"points": [
-            "Added to Doc"
-        ]
+            		"Completely reworded the spell to not be so OP."
+                ]
 	}
 ]
