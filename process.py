@@ -9,7 +9,6 @@ def wrap_text(text):
 
 
 def filter_through_list(obj):
-    print(obj)
     with io.StringIO() as string:
         type_ = obj["type"]
         string.write(f"-# {type_["effect"]} \\* {type_["group"]} (pg. {type_["page"]})\\n")
@@ -51,7 +50,7 @@ def determine_date():
 
 def primary():
     with open("data.json") as file_pointer:
-        obj = json.load(file_pointer)["body"]
+        obj = json.loads(json.load(file_pointer)["body"])
 
     with open("messages.txt", "x") as file_pointer:
         header = determine_date()
