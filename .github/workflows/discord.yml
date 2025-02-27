@@ -1,1 +1,29 @@
+name: Send the Patch Notes to Discord.
 
+on:
+  push:
+    paths:  # Only run for 'data.json', and NO other change.
+      - "data.json"
+
+jobs:
+  process_json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python  # The data is processed by a Python program, so a
+        # set-up is required.
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"  # I chose 3.12 out of convenience.
+
+      - name: Process Data
+        run: python process.py
+
+      - name: Send messages to Discord
+        run: |
+          while read -r msg; do
+            curl -H "Content-Type: application/json" -X POST -d "$msg" ${{ secrets.DISCORD_WEBHOOK }}
+            sleep 1
+          done < messages.txt
