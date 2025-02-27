@@ -11,6 +11,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Collect body of Issue
+        run: echo '${{ toJSON(github.event.issue.body) }}' > issue.json
+
       - name: Set up Python  # The data is processed by a Python program, so a
         # set-up is required.
         uses: actions/setup-python@v4
