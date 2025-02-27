@@ -1,9 +1,8 @@
 name: Send the Patch Notes to Discord.
 
 on:
-  push:
-    paths:  # Only run for 'data.json', and NO other change.
-      - "data.json"
+  issues:
+    types: [opened, closed]
 
 jobs:
   process_json:

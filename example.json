@@ -12,16 +12,5 @@
 	            "Reworded feature 3"
 	        ], 
         "comment": "Needed to rework."
-	},
-    {
-        "type": {
-            "effect": "BALANCING",
-            "group": "Spell",
-            "page": 12
-        },
-		"name": "Hold Person",
-		"points": [
-            		"Completely reworded the spell to not be so OP."
-                ]
 	}
 ]
