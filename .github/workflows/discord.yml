@@ -16,7 +16,10 @@ jobs:
           echo '{
             "body": ${{ toJSON(github.event.issue.body) }}
           }' > data.json
-      
+
+      # TEMPORARY; DEBUGGING
+      - name: Debug data.json
+        run: cat data.json
 
       - name: Set up Python  # The data is processed by a Python program, so a
         # set-up is required.
